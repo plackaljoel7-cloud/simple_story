@@ -162,7 +162,6 @@ def forest_escape():
         return
 
 def treasure_island():
-    def treasure_island():
     print("""You are a sailor searching for a legendary treasure that supposedly lies hidden on a mysterious island.
     After months of searching, you finally discover an old map inside a bottle.
     The map shows an island with an X marking the location of the treasure.
@@ -322,7 +321,6 @@ def treasure_island():
         Although you leave the gold behind, you survive the adventure.
         YOU SURVIVED, BUT THE TREASURE REMAINS ON THE ISLAND!""")
 def sea_voyage():
-    def sea_voyage():
     print("""You are a sailor on a voyage across the ocean.
     One night, a massive storm hits your ship. The waves crash against the deck,
     the sails tear apart, and your compass falls into the sea.
@@ -445,7 +443,7 @@ def sea_voyage():
         YOU WIN! YOU NAVIGATED YOUR WAY HOME!""")
 
 
-ask_q(f"Hi {name}! Which Story Experience do you want?", 3, "Forest Escape", "Treasure Island", "Sea Voyage", "")
+ask_q("Which Story Experience do you want?", 3, "Forest Escape", "Treasure Island", "Sea Voyage", "")
 if choice == "1":
     forest_escape()
 elif choice == "2":
