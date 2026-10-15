@@ -442,14 +442,20 @@ def sea_voyage():
         You sail into the harbor as people cheer from the docks.
         YOU WIN! YOU NAVIGATED YOUR WAY HOME!""")
 
+end = "no"
+while end == "no":
+    ask_q("Which Story Experience do you want?", 3, "Forest Escape", "Treasure Island", "Sea Voyage", "")
+    if choice == "1":
+        forest_escape()
+    elif choice == "2":
+        treasure_island()
+    else: 
+        sea_voyage()
+    ask_q("Play another game?", 2, "yes", "no","","")
+    if choice == 2:
+        end = "yes"
 
-ask_q("Which Story Experience do you want?", 3, "Forest Escape", "Treasure Island", "Sea Voyage", "")
-if choice == "1":
-    forest_escape()
-elif choice == "2":
-    treasure_island()
-else: 
-    sea_voyage()
+
 
 
 
