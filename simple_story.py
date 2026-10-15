@@ -162,10 +162,168 @@ def forest_escape():
         return
 
 def treasure_island():
-    print("Sorry This Feature is not coded yet :(")
+    def treasure_island():
+    print("""You are a sailor searching for a legendary treasure that supposedly lies hidden on a mysterious island.
+    After months of searching, you finally discover an old map inside a bottle.
+    The map shows an island with an X marking the location of the treasure.
+    You gather your supplies, board your small boat, and sail toward the island.
+    But finding the treasure won't be easy.
+    Can you find the treasure and escape the island alive?""")
+
+    ask_q("You arrive at the island and see a jungle, a rocky mountain, and a beach cave. Where do you explore first?", 3, "Explore the jungle", "Climb the mountain", "Enter the beach cave", "")
+
+    if choice == "1":
+        print("You enter the thick jungle. After walking for a while, you discover an old wooden sign pointing deeper into the forest.")
+
+        ask_q("You hear strange noises coming from the bushes. What do you do?", 3, "Investigate the noises", "Follow the wooden sign", "Climb a tree to look around", "")
+
+        if choice == "1":
+            print("""You walk toward the bushes and suddenly a wild boar charges at you.
+            You try to run, but you trip over a root.
+            YOU LOSE""")
+            return
+
+        elif choice == "2":
+            print("You follow the sign and discover an abandoned pirate camp. Inside a broken chest, you find a rusty key.")
+
+        else:
+            print("You climb a tree and spot a stone temple hidden deeper in the jungle. You climb down and head toward it.")
+
+    elif choice == "2":
+        print("You begin climbing the rocky mountain. The climb is difficult, but from the top you can see the entire island.")
+
+        ask_q("You spot a waterfall and a ruined temple below. Which way do you go?", 2, "Go toward the waterfall", "Head toward the temple", "", "")
+
+        if choice == "1":
+            print("Behind the waterfall, you discover a small opening in the rock. Inside, you find an old pirate skeleton holding a rusty key.")
+
+        else:
+            print("You reach the ruined temple and find strange symbols carved into the stone walls.")
+
+    else:
+        print("You enter the dark cave. You notice footprints in the sand and an old wooden chest near the back.")
+
+        ask_q("The cave gets darker as you go deeper. What do you do?", 2, "Open the wooden chest", "Search the cave walls", "", "")
+
+        if choice == "1":
+            print("""You open the chest, but it is a trap. A pile of rocks falls from above and blocks the entrance.
+            You cannot escape the cave.
+            YOU LOSE""")
+            return
+
+        else:
+            print("You discover a hidden passage behind some rocks. At the end, you find a rusty key and an old note.")
+
+    print("\nYou continue your search for the treasure.")
+
+    ask_q("You find three paths leading away from the area. One leads to a stone temple, one to a swamp, and one to a wooden bridge.", 3, "Enter the stone temple", "Cross the swamp", "Cross the wooden bridge", "")
+
+    if choice == "1":
+        print("You enter the temple and discover a stone door with a keyhole.")
+
+        ask_q("You have found a strange door. How do you open it?", 2, "Use the rusty key", "Force the door open", "", "")
+
+        if choice == "1":
+            print("The key fits perfectly! The door slowly opens, revealing a room filled with ancient paintings and a staircase leading underground.")
+
+        else:
+            print("""You push against the stone door, but the ceiling begins to collapse.
+            You are buried under the falling rocks.
+            YOU LOSE""")
+            return
+
+    elif choice == "2":
+        print("You step into the swamp. The water is muddy, and the ground is unstable.")
+
+        ask_q("You notice a fallen tree and a narrow path through the water. Which do you use?", 2, "Walk across the fallen tree", "Take the narrow path", "", "")
+
+        if choice == "1":
+            print("You carefully cross the fallen tree and discover a stone door hidden among the trees.")
+
+        else:
+            print("""You step onto a patch of soft mud and sink deeper and deeper.
+            You cannot pull yourself free.
+            YOU LOSE""")
+            return
+
+    else:
+        print("You carefully cross the wooden bridge. Halfway across, a plank breaks beneath your foot.")
+
+        ask_q("The bridge starts falling apart. What do you do?", 2, "Jump to the other side", "Turn around and go back", "", "")
+
+        if choice == "1":
+            print("You make a desperate leap and land safely on the other side. Nearby, you discover a stone door.")
+
+        else:
+            print("You slowly make your way back and find another path leading to the stone door.")
+
+    print("\nYou finally reach a huge stone door covered in pirate symbols.")
+
+    ask_q("The door opens, revealing two tunnels. One has golden coins scattered on the floor, while the other has an X carved into the wall.", 2, "Follow the golden coins", "Follow the X symbol", "", "")
+
+    if choice == "1":
+        print("""You follow the golden coins into a narrow tunnel. Suddenly, the ground gives way beneath you.
+        You fall into a deep pit filled with sharp rocks.
+        YOU LOSE""")
+        return
+
+    else:
+        print("You follow the X symbols until you reach a massive underground chamber.")
+
+    print("\nInside the chamber, you see a giant treasure chest sitting on a stone platform.")
+
+    ask_q("The treasure chest is surrounded by traps. How will you reach it?", 3, "Run straight to the chest", "Look for a safe path", "Throw a rock to test the floor", "")
+
+    if choice == "1":
+        print("""You rush toward the chest, but the floor triggers a trap. Arrows shoot from the walls.
+        You fall before reaching the treasure.
+        YOU LOSE""")
+        return
+
+    elif choice == "2":
+        print("You carefully examine the floor and spot several pressure plates. You step around them and safely reach the chest.")
+
+    else:
+        print("You throw a rock onto the floor. Several hidden traps activate, revealing which stones are safe. You carefully cross the chamber.")
+
+    print("\nYou stand in front of the treasure chest. It has a large lock.")
+
+    ask_q("How will you open the chest?", 3, "Use the rusty key", "Smash the lock with a rock", "Search the chamber for clues", "")
+
+    if choice == "1":
+        print("You insert the rusty key. It turns with a loud click, and the chest opens!")
+
+    elif choice == "2":
+        print("""You smash the lock, but the chest triggers a hidden trap. Poisonous gas fills the chamber.
+        You collapse before you can escape.
+        YOU LOSE""")
+        return
+
+    else:
+        print("You search the walls and discover a hidden lever. You pull it, and the chest unlocks with a loud click!")
+
+    print("""\nYou slowly open the chest. Inside are piles of gold coins, sparkling jewels, and a golden crown.
+    At the bottom, you find a note written by the pirate who hid the treasure.
+    It says that anyone who finds the treasure may claim it as their own.
+    YOU FOUND THE TREASURE!""")
+
+    ask_q("You have the treasure, but the island is beginning to shake as the ancient chamber collapses. What do you do?", 2, "Grab as much treasure as possible and run", "Forget the treasure and escape immediately", "", "")
+
+    if choice == "1":
+        print("""You grab a heavy bag of gold and race toward the exit.
+        The extra weight slows you down, and rocks fall around you.
+        You barely make it outside with the treasure just before the chamber collapses.
+        You rush to your boat and sail away with your fortune.
+        YOU WIN! YOU FOUND THE LOST PIRATE TREASURE!""")
+
+    else:
+        print("""You leave the treasure behind and sprint toward the exit.
+        You escape the collapsing chamber and reach your boat safely.
+        Although you leave the gold behind, you survive the adventure.
+        YOU SURVIVED, BUT THE TREASURE REMAINS ON THE ISLAND!""")
 def sea_voyage():
     print("Sorry This Feature is not coded yet :(")
-name = input("Hi welcome to the story game, whats your name?   ")
+
 
 ask_q(f"Hi {name}! Which Story Experience do you want?", 3, "Forest Escape", "Treasure Island", "Sea Voyage", "")
 if choice == "1":
