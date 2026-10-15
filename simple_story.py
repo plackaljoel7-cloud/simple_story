@@ -452,3 +452,4 @@ while end == "no":
     ask_q("Play another game?", 2, "yes", "no","","")
     if choice == "2":
         end = "yes"
+#is it good?
