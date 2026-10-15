@@ -28,6 +28,21 @@ def ask_q(text, count, one, two, three, four):
             valid = "yes"
         else:
             print(f"That is Not Valid, Type a Number 1-{count}")
+def forest_escape():
+    print("hello")
+def treasure_island():
+    print("hello")
+def sea_voyage():
+    print("hello")
+name = input("Hi welcome to the story game, whats your name?   ")
 
-ask_q("do something", 2, "one", "two", "three", "four")
+ask_q(f"Hi {name}! Which Story Experience do you want?", 3, "Forest Escape", "Treasure Island", "Sea Voyage", "")
+if choice == 1:
+    forest_escape()
+elif choice == 2:
+    treasure_island()
+else: 
+    sea_voyage()
+
+
 
