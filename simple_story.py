@@ -160,7 +160,6 @@ def forest_escape():
         As night approaches, you realize that waiting was a mistake.
         YOU LOSE""")
         return
-
 def treasure_island():
     print("""You are a sailor searching for a legendary treasure that supposedly lies hidden on a mysterious island.
     After months of searching, you finally discover an old map inside a bottle.
@@ -441,7 +440,6 @@ def sea_voyage():
         After days at sea, you finally recognize the coastline of your home.
         You sail into the harbor as people cheer from the docks.
         YOU WIN! YOU NAVIGATED YOUR WAY HOME!""")
-
 end = "no"
 while end == "no":
     ask_q("Which Story Experience do you want?", 3, "Forest Escape", "Treasure Island", "Sea Voyage", "")
@@ -454,8 +452,3 @@ while end == "no":
     ask_q("Play another game?", 2, "yes", "no","","")
     if choice == 2:
         end = "yes"
-
-
-
-
-
