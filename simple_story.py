@@ -450,5 +450,5 @@ while end == "no":
     else: 
         sea_voyage()
     ask_q("Play another game?", 2, "yes", "no","","")
-    if choice == 2:
+    if choice == "2":
         end = "yes"
