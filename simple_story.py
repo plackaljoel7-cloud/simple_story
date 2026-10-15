@@ -322,7 +322,127 @@ def treasure_island():
         Although you leave the gold behind, you survive the adventure.
         YOU SURVIVED, BUT THE TREASURE REMAINS ON THE ISLAND!""")
 def sea_voyage():
-    print("Sorry This Feature is not coded yet :(")
+    def sea_voyage():
+    print("""You are a sailor on a voyage across the ocean.
+    One night, a massive storm hits your ship. The waves crash against the deck,
+    the sails tear apart, and your compass falls into the sea.
+    When the storm finally passes, you discover that you are far from your planned route.
+    Your ship is damaged, your supplies are limited, and you have no idea where you are.
+    Can you navigate your way back home?""")
+
+    ask_q("You inspect your ship and realize you need to act quickly. What do you do first?", 3, "Repair the sails", "Check the navigation equipment", "Search for food and water", "")
+
+    if choice == "1":
+        print("You manage to repair part of the sails using spare rope and cloth. Your ship can move again.")
+    elif choice == "2":
+        print("You check the navigation equipment, but your compass is broken and your map is soaked.")
+    else:
+        print("You search the storage room and find a few cans of food and several bottles of water.")
+
+    print("\nThe next morning, you notice something floating in the water nearby.")
+
+    ask_q("You spot a wooden crate, a group of dolphins, and a distant island. What do you investigate?", 3, "Retrieve the wooden crate", "Follow the dolphins", "Sail toward the island", "")
+
+    if choice == "1":
+        print("You pull the crate aboard. Inside, you find a working compass and a small waterproof map.")
+        compass = True
+    elif choice == "2":
+        print("You follow the dolphins for a while. They lead you toward a region where seabirds are flying, suggesting land may be nearby.")
+        compass = False
+    else:
+        print("You sail toward the island and discover a small beach where you can rest.")
+        compass = False
+
+    print("\nAs the day continues, dark clouds begin gathering on the horizon.")
+
+    ask_q("Another storm is approaching. How will you prepare?", 3, "Lower the sails and secure everything", "Keep sailing at full speed", "Anchor the ship and wait", "")
+
+    if choice == "1":
+        print("You lower the sails and secure the loose equipment. Your ship rides out the storm safely.")
+    elif choice == "2":
+        print("""You keep sailing at full speed, but a powerful wave slams into the ship.
+        Water floods the deck, and your ship begins to sink.
+        YOU LOSE""")
+        return
+    else:
+        print("You drop the anchor, but the ocean is too deep. The anchor cannot reach the seabed, and the ship drifts during the storm.")
+
+    print("\nAfter the storm, you notice a flock of seabirds flying in one direction.")
+
+    ask_q("You need to figure out where land is. What do you do?", 3, "Follow the seabirds", "Sail toward the setting sun", "Stay where you are and wait", "")
+
+    if choice == "1":
+        print("You follow the seabirds and eventually spot land on the horizon.")
+    elif choice == "2":
+        print("You sail west toward the setting sun, hoping it will lead you home. After hours of sailing, you see a large cargo ship in the distance.")
+    else:
+        print("""You wait for help, but nobody appears.
+        Your food and water begin running low, and you become too weak to continue.
+        YOU LOSE""")
+        return
+
+    print("\nYou have found a possible route to safety, but you still need to navigate carefully.")
+
+    if compass:
+        ask_q("You check your compass and map. They suggest two possible routes home. Which do you choose?", 2, "Take the shorter route through a narrow channel", "Take the longer route through open water", "", "")
+
+        if choice == "1":
+            print("You steer toward the narrow channel, but strong currents push your ship toward dangerous rocks.")
+
+            ask_q("The ship is drifting toward the rocks. What do you do?", 2, "Turn sharply away from the rocks", "Keep going and hope to pass", "", "")
+
+            if choice == "1":
+                print("You turn the wheel just in time and steer into safer water.")
+            else:
+                print("""Your ship strikes the rocks and begins taking on water.
+                You cannot repair the damage in time.
+                YOU LOSE""")
+                return
+        else:
+            print("You choose the longer route through open water. It takes more time, but the sailing conditions are safer.")
+
+    else:
+        ask_q("You have no reliable compass. How will you navigate?", 3, "Use the stars at night", "Follow the coastline of the island", "Sail randomly and hope for the best", "")
+
+        if choice == "1":
+            print("That night, you use the North Star to estimate your direction and adjust your course.")
+        elif choice == "2":
+            print("You follow the coastline until you discover a fishing boat near a small harbor.")
+        else:
+            print("""You sail without a plan and become hopelessly lost again.
+            Your fuel and supplies run out before you find land.
+            YOU LOSE""")
+            return
+
+    print("\nAfter several more hours, you see a ship approaching.")
+
+    ask_q("The ship is getting closer. How do you get its attention?", 3, "Fire a signal flare", "Wave a bright piece of cloth", "Ignore it and keep sailing", "")
+
+    if choice == "1":
+        print("You fire a signal flare into the sky. The crew notices it and changes course toward you.")
+    elif choice == "2":
+        print("You wave the bright cloth above your head. A sailor spots you and signals back.")
+    else:
+        print("""You ignore the ship, thinking you can find your own way home.
+        Soon, it disappears over the horizon.
+        You continue sailing, but your supplies run out.
+        YOU LOSE""")
+        return
+
+    print("\nThe other ship comes alongside yours, and its captain offers to help.")
+
+    ask_q("The captain offers you two options. What do you choose?", 2, "Accept a tow to the nearest harbor", "Ask for a map and navigate home yourself", "", "")
+
+    if choice == "1":
+        print("""The captain attaches a towline to your ship and guides you safely to the nearest harbor.
+        You step onto land, exhausted but relieved.
+        YOU WIN! YOU MADE IT BACK TO SAFETY!""")
+    else:
+        print("""The captain gives you a map and helps you determine your position.
+        You set your course, follow the map, and sail carefully through the remaining waters.
+        After days at sea, you finally recognize the coastline of your home.
+        You sail into the harbor as people cheer from the docks.
+        YOU WIN! YOU NAVIGATED YOUR WAY HOME!""")
 
 
 ask_q(f"Hi {name}! Which Story Experience do you want?", 3, "Forest Escape", "Treasure Island", "Sea Voyage", "")
