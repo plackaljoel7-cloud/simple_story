@@ -1,4 +1,6 @@
 choice = ""
+win_count = 0
+loss_count = 0
 def ask_q(text, count, one, two, three, four):
     global choice
     valid = ""
@@ -41,6 +43,7 @@ def forest_escape():
         print("""You pick the apple off the tree and take a big bite. You feel satisfied after being hungry for so long, but you start to feel sick.
         It gets worse until you fall to the ground. Looking at the apple in your hand, you spot mold inside.
         YOU LOSE""")
+        loss_count += 1
         return
 
     elif choice == "2":
@@ -49,7 +52,9 @@ def forest_escape():
     elif choice == "3":
         print("""You walk past the tree and the bush. After a while, you can't find any more food. You fall from starvation.
         YOU LOSE""")
+        loss_count += 1
         return
+
 
     else:
         ask_q("You chose to go hunting. You can hunt with a spear or set up a trap.", 2, "Make a spear", "Build a trap", "", "")
@@ -76,6 +81,7 @@ def forest_escape():
         else:
             print("""You eat the raw meat. Soon, you start feeling sick. Your stomach hurts, and you collapse.
             YOU LOSE""")
+            loss_count += 1
             return
 
     print("\nYou continue walking through the forest, feeling a little stronger now.")
@@ -90,6 +96,7 @@ def forest_escape():
         if choice == "1":
             print("""You jump into the river, but the current is much stronger than you expected. You struggle to stay above the water and are swept away.
             YOU LOSE""")
+            loss_count += 1
             return
 
         elif choice == "2":
@@ -127,6 +134,7 @@ def forest_escape():
         if choice == "1":
             print("""You sprint out of the cave and trip over a rock, badly hurting your leg. You cannot travel far enough to escape.
             YOU LOSE""")
+            loss_count += 1
             return
 
         else:
@@ -139,6 +147,7 @@ def forest_escape():
         print("""You keep walking through the darkness. You trip over roots and lose your way completely.
         Exhausted and unable to see, you cannot find your way out.
         YOU LOSE""")
+        loss_count += 1
         return
 
     print("\nThe next morning, you wake up to the sound of birds and distant engines.")
@@ -149,16 +158,19 @@ def forest_escape():
         print("""You wave your arms, and the driver notices you. The car stops, and the driver offers to take you to the nearest ranger station.
         You explain what happened, and the rangers help you contact your friends.
         YOU WIN! YOU ESCAPED THE FOREST!""")
+        win_count += 1
 
     elif choice == "2":
         print("""You follow the trail and discover a forest ranger station. You knock on the door, and a ranger comes outside.
         You explain that you got lost, and the ranger helps you get back to safety.
         YOU WIN! YOU ESCAPED THE FOREST!""")
+        win_count += 1
 
     else:
         print("""You wait beside the road, hoping your friends will return. Hours pass, and nobody comes.
         As night approaches, you realize that waiting was a mistake.
         YOU LOSE""")
+        loss_count += 1
         return
 def treasure_island():
     print("""You are a sailor searching for a legendary treasure that supposedly lies hidden on a mysterious island.
@@ -179,6 +191,7 @@ def treasure_island():
             print("""You walk toward the bushes and suddenly a wild boar charges at you.
             You try to run, but you trip over a root.
             YOU LOSE""")
+            loss_count += 1
             return
 
         elif choice == "2":
@@ -207,6 +220,7 @@ def treasure_island():
             print("""You open the chest, but it is a trap. A pile of rocks falls from above and blocks the entrance.
             You cannot escape the cave.
             YOU LOSE""")
+            loss_count += 1
             return
 
         else:
@@ -228,6 +242,7 @@ def treasure_island():
             print("""You push against the stone door, but the ceiling begins to collapse.
             You are buried under the falling rocks.
             YOU LOSE""")
+            loss_count += 1
             return
 
     elif choice == "2":
@@ -242,6 +257,7 @@ def treasure_island():
             print("""You step onto a patch of soft mud and sink deeper and deeper.
             You cannot pull yourself free.
             YOU LOSE""")
+            loss_count += 1
             return
 
     else:
@@ -263,6 +279,7 @@ def treasure_island():
         print("""You follow the golden coins into a narrow tunnel. Suddenly, the ground gives way beneath you.
         You fall into a deep pit filled with sharp rocks.
         YOU LOSE""")
+        loss_count += 1
         return
 
     else:
@@ -276,6 +293,7 @@ def treasure_island():
         print("""You rush toward the chest, but the floor triggers a trap. Arrows shoot from the walls.
         You fall before reaching the treasure.
         YOU LOSE""")
+        loss_count += 1
         return
 
     elif choice == "2":
@@ -295,6 +313,7 @@ def treasure_island():
         print("""You smash the lock, but the chest triggers a hidden trap. Poisonous gas fills the chamber.
         You collapse before you can escape.
         YOU LOSE""")
+        loss_count += 1
         return
 
     else:
@@ -305,6 +324,7 @@ def treasure_island():
     It says that anyone who finds the treasure may claim it as their own.
     YOU FOUND THE TREASURE!""")
 
+
     ask_q("You have the treasure, but the island is beginning to shake as the ancient chamber collapses. What do you do?", 2, "Grab as much treasure as possible and run", "Forget the treasure and escape immediately", "", "")
 
     if choice == "1":
@@ -313,12 +333,14 @@ def treasure_island():
         You barely make it outside with the treasure just before the chamber collapses.
         You rush to your boat and sail away with your fortune.
         YOU WIN! YOU FOUND THE LOST PIRATE TREASURE!""")
+        win_count += 1
 
     else:
         print("""You leave the treasure behind and sprint toward the exit.
         You escape the collapsing chamber and reach your boat safely.
         Although you leave the gold behind, you survive the adventure.
         YOU SURVIVED, BUT THE TREASURE REMAINS ON THE ISLAND!""")
+        loss_count += 1
 def sea_voyage():
     print("""You are a sailor on a voyage across the ocean.
     One night, a massive storm hits your ship. The waves crash against the deck,
@@ -360,6 +382,7 @@ def sea_voyage():
         print("""You keep sailing at full speed, but a powerful wave slams into the ship.
         Water floods the deck, and your ship begins to sink.
         YOU LOSE""")
+        loss_count += 1
         return
     else:
         print("You drop the anchor, but the ocean is too deep. The anchor cannot reach the seabed, and the ship drifts during the storm.")
@@ -376,6 +399,7 @@ def sea_voyage():
         print("""You wait for help, but nobody appears.
         Your food and water begin running low, and you become too weak to continue.
         YOU LOSE""")
+        loss_count += 1
         return
 
     print("\nYou have found a possible route to safety, but you still need to navigate carefully.")
@@ -394,6 +418,7 @@ def sea_voyage():
                 print("""Your ship strikes the rocks and begins taking on water.
                 You cannot repair the damage in time.
                 YOU LOSE""")
+                loss_count += 1
                 return
         else:
             print("You choose the longer route through open water. It takes more time, but the sailing conditions are safer.")
@@ -409,6 +434,7 @@ def sea_voyage():
             print("""You sail without a plan and become hopelessly lost again.
             Your fuel and supplies run out before you find land.
             YOU LOSE""")
+            loss_count += 1
             return
 
     print("\nAfter several more hours, you see a ship approaching.")
@@ -424,6 +450,7 @@ def sea_voyage():
         Soon, it disappears over the horizon.
         You continue sailing, but your supplies run out.
         YOU LOSE""")
+        loss_count += 1
         return
 
     print("\nThe other ship comes alongside yours, and its captain offers to help.")
@@ -434,12 +461,14 @@ def sea_voyage():
         print("""The captain attaches a towline to your ship and guides you safely to the nearest harbor.
         You step onto land, exhausted but relieved.
         YOU WIN! YOU MADE IT BACK TO SAFETY!""")
+        win_count += 1
     else:
         print("""The captain gives you a map and helps you determine your position.
         You set your course, follow the map, and sail carefully through the remaining waters.
         After days at sea, you finally recognize the coastline of your home.
         You sail into the harbor as people cheer from the docks.
         YOU WIN! YOU NAVIGATED YOUR WAY HOME!""")
+        win_count += 1
 end = "no"
 while end == "no":
     ask_q("Which Story Experience do you want?", 3, "Forest Escape", "Treasure Island", "Sea Voyage", "")
